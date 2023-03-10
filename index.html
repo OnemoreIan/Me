@@ -14,59 +14,113 @@
 </head>
 
 <body>
-    <main class="main">
-        <header class="top">
-            <nav class="header">
-                <ul class="hul">
-                    <li class="hli"><a class="ha" href="#">Mi portafolio</a></li>
-                    <li class="hli"><a class="ha" href="#quiensoy">Quien soy</a></li>
-                    <li class="hli"><a class="ha" href="">Experiencia</a></li>
-                    <li class="hli"><a class="ha" href="">Proyectos activos</a></li>
-                </ul>
-            </nav>
-        </header>
+    <div class="sidebar" id="sidebar">
 
-        <article class="aticle">
-            <section class="artsec">
-                <header class="arh">
-                    <h1 class="name">OnemoreIan</h1>
-                </header>
-            </section>
+        <nav class="nav" id="contSidebar">
+            <button class="closebtn sidebtn" id="sidebtn">X</button>
+            <ul>
+                <li>
+                    <img src="" alt="buho" class="img">
+                    <h1>OnemoreIan</h1>
+                </li>
+                <li>
+                    <a href="#quiensoy">Quien soy</a>
+                </li>
+                <li>
+                    <a href="#sobremi">Sobre mi</a>
+                </li>
+                <li>
+                    <a href="#portafolio">Portafolio</a>
+                </li>
+                <li>
+                    <a href="#habilidades">Habilidades</a>
+                </li>
+                <li>
+                    <a href="#contacto">Contacto</a>
+                </li>
+                <li>
+                    <a href="#proyectosActivos">Proyectos activos</a>
+                </li>
+                <li>
+                    <a href="#galeria">Galeria</a>
+                </li>
+            </ul>
+            <!-- <button>En-Es</button> -->
+        </nav>
+
+    </div>
+
+    <main class="main" id="main">
+
+        <div class='spaceCont'>
+            <img src="./src/buho.png" class="buhoimg" alt="icono buho">
+
+            <button class="closebtn contbtn contbtnHidden" id="contbtn">&#9776;</button>
+
+            <article class="aticle">
+
+                <section class="artsec">
+                    <div id="quiensoy">
+                        <h2>Quien soy</h2>
+                        <p>Mi crecimiento en esta area radica en el uso de juegos, al descubrir que los juegos pueden
+                            ser
+                            hechos por una persona y que realmente no tenia restriccciones fue el inicio de lo que me
+                            conmovio por intentar estudiralo</p>
+                    </div>
+                </section>
+
+                <section class="artsec">
+                    <div id="quiensoy">
+                        <h2>Sobre mi</h2>
+                        <p>Soy una persona apasionada por la programación, por el deporte y los dulces.</p>
+                        <p>La diciplina, la dedicacion y la creatividad son las palabras que me podrian describir</p>
+                        <p>El no dar lo maximo de mi en las cosas me deja un abor extraño y me deja la duda de que se
+                            podria mejorar mas</p>
+                    </div>
+                </section>
+
+                <section class="artsec">
+                    <div id="quiensoy">
+                        <h2>Portafolio</h2>
+                        <p>Mi crecimiento en esta area radica en el uso de juegos, al descubrir que los juegos pueden
+                            ser
+                            hechos por una persona y que realmente no tenia restriccciones fue el inicio de lo que me
+                            conmovio por intentar estudiralo</p>
+                    </div>
+                </section>
+                <section class="artsec">
+                    <div id="quiensoy">
+                        <h2>Habilidades</h2>
+                        <p>Mi crecimiento en esta area radica en el uso de juegos, al descubrir que los juegos pueden
+                            ser
+                            hechos por una persona y que realmente no tenia restriccciones fue el inicio de lo que me
+                            conmovio por intentar estudiralo</p>
+                    </div>
+                </section>
+
+                <section class="artsec">
+                    <div>
+                        <h2 class="subHeader">Contacto</h2>
+                    </div>
+                </section>
+
+                <section class="artsec">
+                    <div>
+                        <h2 class="subHeader">Proyectos activos</h2>
+                    </div>
+                </section>
+
+                <section class="artsec">
+                    <div>
+                        <h2 class="subHeader">Galeria de proyectos</h2>
+                    </div>
+                </section>
 
 
-            <section class="artsec">
-                <div id="quiensoy">
-                    <h2>Quien soy</h2>
-                    <p>Mi crecimiento en esta area radica en el uso de juegos, al descubrir que los juegos pueden ser
-                        hechos por una persona y que realmente no tenia restriccciones fue el inicio de lo que me
-                        conmovio por intentar estudiralo</p>
-                </div>
-            </section>
+            </article>
 
-            <section class="artsec">
-                <div>
-                    <h2 class="subHeader">Experiencia</h2>
-                </div>
-            </section>
+        </div>
 
-            <section class="artsec">
-                <div>
-                    <h2 class="subHeader">Proyectos activos</h2>
-                </div>
-            </section>
-
-            <section class="artsec">
-                <div>
-                    <h2 class="subHeader">Galeria de proyectos</h2>
-                </div>
-            </section>
-
-            <div id="ejemplo">
-                Contenido de ejemplo
-            </div>
-            <button id="btnE">Boton</button>
-
-        </article>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

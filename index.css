@@ -5,13 +5,107 @@
     border: 0;
     color: #333;
     font-family: 'Golos Text', sans-serif;
+    transition: 700ms all;
+    scroll-behavior: smooth;
 }
 p{
     font-weight: 600;
 }
+a{
+    font-weight: 500;
+    font-size: 1.3rem;   
+}
+h1{
+    font-size: 1.5rem;
+    color: white;
+}
+
+/**********************************Sidebar*********************************/
+.sidebar{
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15rem;
+    background-color: #721121;
+}
+.nav{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.nav ul{
+    height: 100%;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    gap: 3rem;
+}
+.nav ul li{
+    list-style: none;
+    text-align: center;
+}
+.nav ul li a{
+    text-decoration: none;
+    color: white;
+}
+.closebtn{
+    height: 1.5rem;
+    width: 1.5rem;
+    color: #333;
+    background-color: aliceblue;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.sidebtn{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+}
+/*acciones con js*/
+.sidebarHidden{
+    width: 0;
+}
+.contSidebar{
+    display: none;
+}
+
+
+/**********************************Main content*********************************/
+
+.contbtn{
+    position: absolute;
+    top: 1rem;
+    left: -2.5rem;
+}
+.contbtnHidden{
+    display: none;
+}
 .main{
+    position: relative;
+    margin-left: 15rem;
     min-height: 100vh;
-    background: radial-gradient(circle at 95% 100%, rgb(255, 174, 68), rgb(248, 255, 121), rgb(255, 185, 50));
+    background-color: #FFCF99;
+    /* background: radial-gradient(circle at 95% 100%, rgb(255, 174, 68), rgb(248, 255, 121), rgb(255, 185, 50)); */
+}
+.spaceCont{
+    position: relative;
+    margin: 0 3rem;
+    padding: 1.5rem 0;
+    box-shadow: 0 0 5px 5px #F15156;
+    background-color: #F15156;
+    height: 100%;
+    border: 1px solid red;
+}
+.spaceCont .buhoimg {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    height: 2rem;
+    width: 2rem;
+}
+.mainAll{ /*js style*/
+    margin: 0;
 }
 .main .top {
     padding: .2rem 0;
@@ -20,8 +114,6 @@ p{
     border-bottom: .3rem solid rgba(255, 255, 255, 0.5);
     margin-bottom: 1rem;
 }
-
-/**********************************header*********************************/
 .main .top .header{
     height: auto;
 }
