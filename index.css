@@ -1,9 +1,9 @@
-
+/*Global*/
 *{
     margin: 0;
     padding: 0;
     border: 0;
-    color: #333;
+    color: white;
     font-family: 'Golos Text', sans-serif;
     transition: 700ms all;
     scroll-behavior: smooth;
@@ -29,23 +29,23 @@ h1{
     width: 15rem;
     background-color: #721121;
 }
-.nav{
+.sidebar .nav{
     height: 100%;
     display: flex;
     justify-content: center;
 }
-.nav ul{
+.sidebar .nav ul{
     height: 100%;
     display: flex;
     flex-flow: column;
     justify-content: center;
     gap: 3rem;
 }
-.nav ul li{
+.sidebar .nav ul li{
     list-style: none;
     text-align: center;
 }
-.nav ul li a{
+.sidebar .nav ul li a{
     text-decoration: none;
     color: white;
 }
@@ -62,7 +62,7 @@ h1{
     top: 1.5rem;
     right: 1.5rem;
 }
-/*acciones con js*/
+/*estilos del sidebar con acciones usando js*/
 .sidebarHidden{
     width: 0;
 }
@@ -73,29 +73,38 @@ h1{
 
 /**********************************Main content*********************************/
 
-.contbtn{
-    position: absolute;
-    top: 1rem;
-    left: -2.5rem;
-}
-.contbtnHidden{
-    display: none;
-}
 .main{
     position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
     margin-left: 15rem;
     min-height: 100vh;
-    background-color: #FFCF99;
+    background-color: #F15156;
+    /* background-color: #FFCF99; */
     /* background: radial-gradient(circle at 95% 100%, rgb(255, 174, 68), rgb(248, 255, 121), rgb(255, 185, 50)); */
 }
+/*estilos de contenido principal editado con js*/
+.mainAll{ 
+    margin: 0;
+}
+
+/**********************************Space content**********************************/
+
 .spaceCont{
     position: relative;
-    margin: 0 3rem;
-    padding: 1.5rem 0;
-    box-shadow: 0 0 5px 5px #F15156;
     background-color: #F15156;
     height: 100%;
-    border: 1px solid red;
+    width: 100%;
+}
+.spaceCont .contbtn{
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+.spaceCont .contbtnHidden{
+    display: none;
 }
 .spaceCont .buhoimg {
     position: absolute;
@@ -104,74 +113,21 @@ h1{
     height: 2rem;
     width: 2rem;
 }
-.mainAll{ /*js style*/
-    margin: 0;
-}
-.main .top {
-    padding: .2rem 0;
-    background-color: rgba(255, 255, 255, 0.5);
-    border-radius: 0 0 .5rem .5rem;
-    border-bottom: .3rem solid rgba(255, 255, 255, 0.5);
-    margin-bottom: 1rem;
-}
-.main .top .header{
-    height: auto;
-}
-.main .top .header .hul {
-    height: auto;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    gap: 3rem;
-    align-items: center;
-    list-style: none;
-}
-.main .top .header .hul .hli{
-    display: grid;
-    align-items: center;
-    align-content: center;
-}
-.main .top .header .hul .hli .ha{
-    font-size: 2rem;
-    font-weight: 600;
-    text-decoration: none;
-    color: #333;
-    transition: 300ms all;
-}
-.main .top .header .hul .hli .ha:hover{
-    color: #333;
-    text-shadow: 1px 1px 2px rgb(255, 255, 255), 0 3px 2px rgb(255, 89, 0);
-}
-
-/**********************************Fondo de contenido**********************************/
-
-.aticle{
-    margin: 0 3rem;
-    border-radius: 1rem;
-    border: 4px solid rgba(169, 169, 169, 0.7);
-    background-color: rgba(255, 255, 255, 0.9);
-}
-.artsec{
-    /* background: linear-gradient(125deg, rgb(255, 174, 68), rgb(248, 255, 121), rgb(223, 255, 94)); */
-    margin: .5rem;
-    padding: 1rem .3rem;
-    border: 1px solid red;
-}
 
 
 
 /**********************************Contenido**********************************/
+.section{
+    margin: 3rem;
+    border: 1px solid red;
+    height: 90%;
+}
 
-.artsec .arh{
-    display: flex;
-    justify-content: flex-start;
-    gap: 10rem;
+#quiensoy{
+    height: 100%;
+    width: 100%;
+    padding: .5rem;
 }
-.artsec .arh .name{
-    font-size: 2rem;
-    font-weight: 800;
-}
-.subHeader{
-    font-size: 1.6rem;
-    font-weight: 700;
+#quiensoy h2{
+    font-size: 3rem;
 }
