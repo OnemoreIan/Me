@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Portafolio ed OnemoreIan en html,css y js simples">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./index.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Golos+Text&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./styles/conten.css">
     <link rel="icon" href="./src/owl_icon.svg">
     <title>Mi portafolio</title>
 </head>
@@ -16,7 +20,8 @@
 <body>
     <div class="sidebar" id="sidebar">
 
-        <nav class="nav" id="contSidebar">
+        <nav class="nav navHidden" id="contSidebar">
+            <!-- <button class="closebtn sidebtn" >X</button> -->
             <button class="closebtn sidebtn" id="sidebtn">X</button>
             <ul>
                 <li>
@@ -24,25 +29,26 @@
                     <h1>OnemoreIan</h1>
                 </li>
                 <li>
-                    <a href="#quiensoy">Quien soy</a>
+                    <a href="#quiensoy" id="quiensoybtn">Quien soy</a>
+
                 </li>
                 <li>
-                    <a href="#sobremi">Sobre mi</a>
+                    <a href="#sobremi" id="sobremibtn">Sobre mi</a>
                 </li>
                 <li>
-                    <a href="#portafolio">Portafolio</a>
+                    <a href="#portafolio" id="portafoliobtn">Portafolio</a>
                 </li>
                 <li>
-                    <a href="#habilidades">Habilidades</a>
+                    <a href="#habilidades" id="habilidadesbtn">Habilidades</a>
                 </li>
                 <li>
-                    <a href="#contacto">Contacto</a>
+                    <a href="#contacto" id="contactobtn">Contacto</a>
                 </li>
                 <li>
-                    <a href="#proyectosActivos">Proyectos activos</a>
+                    <a href="#proyectosActivos" id="proyectosActivosbtn">Proyectos activos</a>
                 </li>
                 <li>
-                    <a href="#galeria">Galeria</a>
+                    <a href="#galeria" id="galeriabtn">Galeria</a>
                 </li>
             </ul>
             <!-- <button>En-Es</button> -->
@@ -51,24 +57,65 @@
     </div>
 
     <main class="main" id="main">
-        
+
 
         <article class='spaceCont'>
             <button class="closebtn contbtn contbtnHidden" id="contbtn">&#9776;</button>
             <img src="./src/buho.png" class="buhoimg" alt="icono buho">
 
-            <section class="section">
+            <section class="section" >
                 <div id="quiensoy">
                     <h2>Quien soy</h2>
-                    <p>Mi crecimiento en esta area radica en el uso de juegos, al descubrir que los juegos pueden
-                        ser
+                    <p>Mi desarrollo en esta area inicio desde el uso de videojuegos</p>
+                    <img class="quienImg" src="https://media.tenor.com/wciT7jbJwNEAAAAi/anime-gaming.gif" alt="control">
+                    <p>Como este</p> 
+                    <img class="quienImg" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette2.wikia.nocookie.net%2Ffliplinestudios%2Fimages%2F1%2F12%2FApp_page_lg-Pizzeria_HD.png%2Frevision%2Flatest%3Fcb%3D20170807153204&f=1&nofb=1&ipt=2dd60f0245172b5f687da07a6e11d565e1f440cac9a0e5740cc15dce48b4327a&ipo=images" alt="">
+                    <p>Al descubrir que los juegos pueden ser
                         hechos por una persona y que realmente no tenia restriccciones fue el inicio de lo que me
                         conmovio por intentar estudiralo</p>
+                    <img class="quienImg" src="https://media.tenor.com/NSUTnMx2zVQAAAAC/upset.gif" alt="conmovido">
+                    <p>Decubri su compocision y las ramas de la programacion</p>
+                    <img class="quienImg" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3.bp.blogspot.com%2F-lyBpzQjRu0g%2FVsPhBdnK3wI%2FAAAAAAAAAEg%2FyqGN4AxkflA%2Fs640%2F3265.png&f=1&nofb=1&ipt=c03b925f37bf502afb85e4408d18ecc47551ace0f631a075f234aa27908b6b65&ipo=images" alt="ramas">
+                    <img class="quienImg" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F8f%2F83%2Fb0%2F8f83b0b8bf8d4b3186bdb72c6012922b.png&f=1&nofb=1&ipt=07d58116485e496788c0fd8d607b694527f4e8b4b51c56dcd5eae046dd8e5930&ipo=images" alt="rama">
+                    
+                    <p>Los diferentes tipos de lenguajes y sus usos</p>
+                    <p>Hasta la actualidad donde estoy enfocado principalmente en el desarrollo web</p>
                 </div>
+
+                <!-- <div class="ejemplodeentrada novisto" id="ejemplodeentrada"></div> -->
+
+                <div id="sobreMi" class="contenidoMostrado novisto">
+                    <h2>Sobre mi</h2>
+                    <p>Soy una persona apasionada por la programación, por el deporte y los dulces.</p>
+                    <p>La diciplina, la dedicacion y la creatividad son las palabras que me podrian describir</p>
+                    <p>El no dar lo maximo de mi en las cosas me deja un abor extraño y me deja la duda de que se
+                        podria mejorar mas</p>
+                </div>
+
+                <div id="portafolio" class="contenidoMostrado novisto">
+                    <h3>Portafolio</h3>
+                </div>
+
+                <div id="habilidades" class="contenidoMostrado novisto">
+                    <h3>habilidades</h3>
+                </div>
+
+                <div id="contacto" class="contenidoMostrado novisto">
+                    <h3>contacto</h3>
+                </div>
+
+                <div id="proyectosActivos" class="contenidoMostrado novisto">
+                    <h3>proyectos activos</h3>
+                </div>
+
+                <div id="galeria" class="contenidoMostrado novisto">
+                    <h3>galeria</h3>
+                </div>
+
             </section>
 
             <!-- <section class="artsec">
-                    <div id="quiensoy">
+                    <div id="sobreMi">
                         <h2>Sobre mi</h2>
                         <p>Soy una persona apasionada por la programación, por el deporte y los dulces.</p>
                         <p>La diciplina, la dedicacion y la creatividad son las palabras que me podrian describir</p>

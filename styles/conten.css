@@ -1,0 +1,68 @@
+/**********************************Contenido**********************************/
+.section {
+    margin: 3rem;
+    border: 1px solid red;
+    min-height: 90%;
+    
+}
+.salidaSeccion{
+    animation: salidaContenido 1.5s forwards;
+}
+.entradaSeccion{
+    animation: entradaContenido 1.5s forwards;
+}
+#quiensoy {
+    border: 3px groove blue;
+    border-radius: 10px;
+    margin: .5rem;
+}
+
+#quiensoy h2 {
+    font-size: 3rem;
+    text-decoration: underline;
+    margin-bottom: 3px;
+}
+
+.quienImg {
+    max-height: 350px;
+}
+
+
+.contenidoMostrado{
+    min-height: 700px;
+    width: 100%;
+}
+
+.ejemplodeentrada{
+    height: 1000px;
+    width: 1000px;
+    background-color: black;
+}
+.novisto{
+    display: none;
+}
+
+
+
+@keyframes salidaContenido {
+    from {
+        transform: translate(0);
+    }
+
+    to {
+        transform: translate(200rem,-100rem);
+        height: 0;
+    }
+}
+@keyframes entradaContenido {
+    from {
+        height: 0;
+        transform: translate(200rem,100rem);
+        
+    }
+
+    to {
+        transform: translate(0);
+        height: 900px;
+    }
+}

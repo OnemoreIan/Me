@@ -50,24 +50,23 @@ h1{
     color: white;
 }
 .closebtn{
-    height: 1.5rem;
-    width: 1.5rem;
+    height: 3rem;
+    width: 3rem;
+    background-color: white;
     color: #333;
-    background-color: aliceblue;
-    border-radius: 50%;
-    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 900;
+    text-align: center;
 }
 .sidebtn{
     position: absolute;
-    top: 1.5rem;
-    right: 1.5rem;
+    top: 0;
+    right: 0;
+    border-radius: 0 0 0 50%;
 }
 /*estilos del sidebar con acciones usando js*/
 .sidebarHidden{
     width: 0;
-}
-.contSidebar{
-    display: none;
 }
 
 
@@ -82,6 +81,7 @@ h1{
     margin-left: 15rem;
     min-height: 100vh;
     background-color: #F15156;
+    overflow: hidden;
     /* background-color: #FFCF99; */
     /* background: radial-gradient(circle at 95% 100%, rgb(255, 174, 68), rgb(248, 255, 121), rgb(255, 185, 50)); */
 }
@@ -100,8 +100,9 @@ h1{
 }
 .spaceCont .contbtn{
     position: absolute;
-    top: 1rem;
-    left: 1rem;
+    top: 0;
+    left: 0;
+    border-radius: 0 0 50% 0;
 }
 .spaceCont .contbtnHidden{
     display: none;
@@ -116,18 +117,3 @@ h1{
 
 
 
-/**********************************Contenido**********************************/
-.section{
-    margin: 3rem;
-    border: 1px solid red;
-    height: 90%;
-}
-
-#quiensoy{
-    height: 100%;
-    width: 100%;
-    padding: .5rem;
-}
-#quiensoy h2{
-    font-size: 3rem;
-}
