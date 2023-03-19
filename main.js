@@ -56,124 +56,113 @@ var contacto = document.getElementById('contacto');
 var proyectosActivos = document.getElementById('proyectosActivos');
 var galeria = document.getElementById('galeria');
 
+//elementos disponibles
+const clasesUso = ['entraEpicamente' /*0*/ , 'saleEpicamente' /*1*/ , 'novisto' /*2*/ ];
+const contenedores = [quiensoy,sobreMi,portafolio,habilidades,contacto,proyectosActivos,galeria];
 
-function cerrarTodos() {
-    if (!quiensoy.classList.contains('novisto')) {
-        quiensoy.classList.add('salidaSeccion');
-        setTimeout(() => {
-            quiensoy.classList.add('novisto');
-            quiensoy.classList.remove('salidaSeccion');
-        }, 1500);
-    }
-    if (!sobreMi.classList.contains('novisto')) {
-        sobreMi.classList.add('novisto');
-    }
-    if (!portafolio.classList.contains('novisto')) {
-        portafolio.classList.add('novisto');
-    }
-    if (!habilidades.classList.contains('novisto')) {
-        habilidades.classList.add('novisto');
-    }
-    if (!contacto.classList.contains('novisto')) {
-        contacto.classList.add('novisto');
-    }
-    if (!proyectosActivos.classList.contains('novisto')) {
-        proyectosActivos.classList.add('novisto');
-    }
-    if (!galeria.classList.contains('novisto')) {
-        galeria.classList.add('novisto');
-    }
-
-}
-
-function abrirUno(opcion) { //todas las opciones hechas
-    switch (opcion) {
-        case 1:
-            //abrir quien soy
-            quiensoy.classList.remove('novisto');
-            quiensoy.classList.add('entradaSeccion');
-            setTimeout(() => {
-                quiensoy.classList.remove('entradaSeccion');
-            }, 1500)
-            break;
-        case 2:
-            //abrir sobre mi
-            sobreMi.classList.add('entradaSeccion');
-            portafolio.classList.remove('novisto');
-            setTimeout(() => {
-                sobreMi.classList.remove('entradaSeccion');
-            }, 1500)
-            break;
-        case 3:
-            //abrir portafolio
-            
-            portafolio.classList.add('entradaSeccion');
-            portafolio.classList.remove('novisto');
-            setTimeout(() => {
-                portafolio.classList.remove('entradaSeccion');
-            }, 1500)
-            break;
-        case 4:
-            //abrir habilidades
-            break;
-        case 5:
-            //abrir contacto
-            break;
-        case 6:
-            //abrir proyectos activos
-            break;
-        case 7:
-            //abrir galeria
-            break
-        default:
-            break;
-    }
-}
-
-function opcionesComprimidas(quien) {
-    quien.classList.remove('novisto');
-    quien.classList.add('entradaSeccion');
+/* function test(){
+    galeria.classList.add(clasesUso[0]);
     setTimeout(() => {
-        quien.classList.remove('entradaSeccion');
-    }, 1500)
+        console.log('buenas voy llegando');
+        galeria.classList.replace(clasesUso[0],clasesUso[1])
+    },4000);
+    
+    setTimeout(() => {
+        console.log('dezaparezco')
+        galeria.classList.replace(clasesUso[1],clasesUso[2]);
+    },5000);
+} */
+
+
+//clase
+class Acciones {
+    constructor(id) {
+        this.yo = id;
+    }
+
+    ejecutar() {
+        //this.id.classList.add(clasesUso[1]);
+        console.log('ejecutando plantilla de ultron');
+        this.salida();
+        this.entrada();
+    }
+
+    salida() {
+        //destinatario
+        //busqueda del elemento activo
+        console.log('ultron inicia la salida');
+        let item;
+        contenedores.forEach((i) => {//buscar la posicion del elemento activoactual
+            if (!i.classList.contains(clasesUso[2])) {
+                return item = i;
+            } else {
+            }
+
+        });
+
+        item.classList.add(clasesUso[1]);
+        setTimeout(() => {
+            item.classList.replace(clasesUso[1],clasesUso[2]);
+            //busqueda de elemento y se añade
+        }, 1000);
+
+    }
+
+    entrada() {
+        if(this.yo.classList.contains(clasesUso[2])){
+            setTimeout(() => {
+                console.log('ultron inicia proceso de entrada');
+                this.yo.classList.replace(clasesUso[2],clasesUso[0]);
+                //this.yo.classList.add(clasesUso[0]);
+                //this.yo.classList.remove(clasesUso[2]);
+                setTimeout(() => {
+                    this.yo.classList.remove(clasesUso[0]);
+                    console.log('se quito la clase')
+                }, 1700);
+            },1000);
+        }else {
+        }
+        
+
+        
+        //revisar por que se baja antes de tiempo
+    }
+
 }
+var btn1 = new Acciones(quiensoy);
+var btn2 = new Acciones(sobreMi);
+var btn3 = new Acciones(portafolio);
+var btn4 = new Acciones(habilidades);
+var btn5 = new Acciones(contacto);
+var btn6 = new Acciones(proyectosActivos);
+var btn7 = new Acciones(galeria);
+
+
 
 quiensoybtn.addEventListener('click', () => {
-    //cierre de todos
-    ejemplodeentrada.classList.remove('novisto');
-    ejemplodeentrada.classList.add('entradaSeccion');
-    quiensoy.classList.add('salidaSeccion');
-    setTimeout(() => {
-        quiensoy.classList.add('novisto')
-        quiensoy.classList.remove('salidaSeccion');
-        ejemplodeentrada.classList.remove('entradaSeccion');
-    }, 1500);
+    btn1.ejecutar();
 });
 
 sobremibtn.addEventListener('click', () => {
-    cerrarTodos();
-    //abrirUno(2);
-    opcionesComprimidas(sobreMi)
-    console.log('funcionando sobre mi');
+    btn2.ejecutar();
 });
 
 portafoliobtn.addEventListener('click',() => {
-    cerrarTodos();
-    abrirUno(3);
-    //opcionesComprimidas(portafolio)
-    console.log('funcionando portafolio')
+    btn3.ejecutar();
 });
-
-/* 
 habilidadesbtn.addEventListener('click',() => {
     console.log('funcionando habilidades')
+    btn4.ejecutar();
 });
 contactobtn.addEventListener('click',() => {
     console.log('funcionando contacto')
+    btn5.ejecutar();
 });
 proyectosActivosbtn.addEventListener('click',() => {
     console.log('funcionando proyectos activos')
+    btn6.ejecutar();
 });
 galeriabtn.addEventListener('click',() => {
     console.log('funcionando galeria')
-}); */
+    btn7.ejecutar();
+});

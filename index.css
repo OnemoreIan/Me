@@ -31,8 +31,10 @@ h1{
 }
 .sidebar .nav{
     height: 100%;
+    overflow: hidden;
     display: flex;
     justify-content: center;
+    overflow-y: auto;
 }
 .sidebar .nav ul{
     height: 100%;
@@ -82,7 +84,7 @@ h1{
     min-height: 100vh;
     background-color: #F15156;
     overflow: hidden;
-    /* background-color: #FFCF99; */
+    /* background-color: #F15156; */
     /* background: radial-gradient(circle at 95% 100%, rgb(255, 174, 68), rgb(248, 255, 121), rgb(255, 185, 50)); */
 }
 /*estilos de contenido principal editado con js*/
@@ -94,7 +96,7 @@ h1{
 
 .spaceCont{
     position: relative;
-    background-color: #F15156;
+    background-color: #333;
     height: 100%;
     width: 100%;
 }

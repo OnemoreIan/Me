@@ -11,58 +11,97 @@
 .entradaSeccion{
     animation: entradaContenido 1.5s forwards;
 }
-#quiensoy {
+
+/*Bloques de contenido*/
+
+/*Bloque general*/
+.contenidoMostrado{
+    margin: .5rem;
+    min-height: 53rem;
+    height: 100%;
+    border: 5px groove orange;
+    background-color: rgb(73, 4, 138);
+    position: relative;
+}
+.novisto{
+    display: none;
+}
+.texplan{
+    text-align: justify;
+}
+
+/*contenido 1*/
+.quiensoy{
     border: 3px groove blue;
     border-radius: 10px;
     margin: .5rem;
 }
 
-#quiensoy h2 {
-    font-size: 3rem;
-    text-decoration: underline;
-    margin-bottom: 3px;
+.dia1H2 {
+    font-size: 4rem;
+    margin: 0 0 2rem 1rem;
+}
+.dia1P{
+    padding-left: 1rem;
+    text-align: justify;
+    font-weight: 500;
+    padding-bottom: .5rem;
 }
 
 .quienImg {
     max-height: 350px;
 }
-
-
-.contenidoMostrado{
-    min-height: 700px;
-    width: 100%;
-}
-
-.ejemplodeentrada{
-    height: 1000px;
-    width: 1000px;
-    background-color: black;
-}
-.novisto{
-    display: none;
+.controlGif{
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    max-height: 50px;
+    max-width: 150px;
+    border-radius: 50px;
+    transform: rotate(25deg);
+    animation: semiDesaparecer 2s infinite alternate;
 }
 
 
 
-@keyframes salidaContenido {
-    from {
-        transform: translate(0);
+
+
+@keyframes semiDesaparecer {
+    from{
+        opacity: 1;
+        box-shadow: 0 0 5px 5px rgb(157, 53, 255);
     }
-
-    to {
-        transform: translate(200rem,-100rem);
-        height: 0;
+    to{
+        opacity: .3;
+        box-shadow: 0 0 5px 5px rgb(52, 0, 100);
     }
 }
-@keyframes entradaContenido {
-    from {
-        height: 0;
-        transform: translate(200rem,100rem);
+
+
+
+
+
+/*animaciones de entrada y salida */
+.entraEpicamente{
+    animation: entraCartoon 1.8s forwards;
+}
+.saleEpicamente{
+    animation: salidaCartoon 1.9s forwards;
+}
+@keyframes entraCartoon {
+    from{
+        transform: translate(-200rem,0);
+    }
+    to{
+        transform: translate(0,0);
         
     }
-
-    to {
-        transform: translate(0);
-        height: 900px;
+}
+@keyframes salidaCartoon {
+    from{
+    }
+    to{
+        transform: translateX(-200rem)
     }
 }
+
