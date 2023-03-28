@@ -38,40 +38,27 @@ contbtn.addEventListener('click', () => {
 });
 
 //botones sidebar
-const quiensoybtn = document.getElementById('quiensoybtn');
+const homebtn = document.getElementById('homebtn');
 const sobremibtn = document.getElementById('sobremibtn');
 const portafoliobtn = document.getElementById('portafoliobtn');
 const habilidadesbtn = document.getElementById('habilidadesbtn');
 const contactobtn = document.getElementById('contactobtn');
-const proyectosActivosbtn = document.getElementById('proyectosActivosbtn');
+const proyectosbtn = document.getElementById('proyectosbtn');
 const galeriabtn = document.getElementById('galeriabtn');
 
 //contenido
-var quiensoy = document.getElementById('quiensoy');
+var home = document.getElementById('home');
 var ejemplodeentrada = document.getElementById('ejemplodeentrada');
 var sobreMi = document.getElementById('sobreMi');
 var portafolio = document.getElementById('portafolio');
 var habilidades = document.getElementById('habilidades');
 var contacto = document.getElementById('contacto');
-var proyectosActivos = document.getElementById('proyectosActivos');
+var proyectos = document.getElementById('proyectos');
 var galeria = document.getElementById('galeria');
 
 //elementos disponibles
 const clasesUso = ['entraEpicamente' /*0*/ , 'saleEpicamente' /*1*/ , 'novisto' /*2*/ ];
-const contenedores = [quiensoy,sobreMi,portafolio,habilidades,contacto,proyectosActivos,galeria];
-
-/* function test(){
-    galeria.classList.add(clasesUso[0]);
-    setTimeout(() => {
-        console.log('buenas voy llegando');
-        galeria.classList.replace(clasesUso[0],clasesUso[1])
-    },4000);
-    
-    setTimeout(() => {
-        console.log('dezaparezco')
-        galeria.classList.replace(clasesUso[1],clasesUso[2]);
-    },5000);
-} */
+const contenedores = [home,sobreMi,portafolio,habilidades,contacto,proyectos,galeria];
 
 
 //clase
@@ -83,12 +70,19 @@ class Acciones {
     ejecutar() {
         //this.id.classList.add(clasesUso[1]);
         console.log('ejecutando plantilla de ultron');
-        this.salida();
+        this.actividad();
         this.entrada();
     }
 
+    actividad(){
+        if (!this.yo.classList.contains('novisto')) {
+            
+        }  else{
+            this.salida();
+        }
+    }
+
     salida() {
-        //destinatario
         //busqueda del elemento activo
         console.log('ultron inicia la salida');
         let item;
@@ -100,6 +94,7 @@ class Acciones {
 
         });
 
+        //animacion de salida y remplaza la animacion para desaparecer
         item.classList.add(clasesUso[1]);
         setTimeout(() => {
             item.classList.replace(clasesUso[1],clasesUso[2]);
@@ -109,6 +104,7 @@ class Acciones {
     }
 
     entrada() {
+        //comprobar si el elemento activo esta con la clase desaparecer
         if(this.yo.classList.contains(clasesUso[2])){
             setTimeout(() => {
                 console.log('ultron inicia proceso de entrada');
@@ -129,36 +125,28 @@ class Acciones {
     }
 
 }
-var btn1 = new Acciones(quiensoy);
+var btn1 = new Acciones(home);
 var btn2 = new Acciones(sobreMi);
 var btn3 = new Acciones(portafolio);
 var btn4 = new Acciones(habilidades);
 var btn5 = new Acciones(contacto);
-var btn6 = new Acciones(proyectosActivos);
+var btn6 = new Acciones(proyectos);
 var btn7 = new Acciones(galeria);
 
 
 
-quiensoybtn.addEventListener('click', () => {
+homebtn.addEventListener('click', () => {
     btn1.ejecutar();
 });
 
-sobremibtn.addEventListener('click', () => {
-    btn2.ejecutar();
-});
 
-portafoliobtn.addEventListener('click',() => {
-    btn3.ejecutar();
-});
-habilidadesbtn.addEventListener('click',() => {
-    console.log('funcionando habilidades')
-    btn4.ejecutar();
-});
+
+
 contactobtn.addEventListener('click',() => {
     console.log('funcionando contacto')
     btn5.ejecutar();
 });
-proyectosActivosbtn.addEventListener('click',() => {
+proyectosbtn.addEventListener('click',() => {
     console.log('funcionando proyectos activos')
     btn6.ejecutar();
 });
@@ -166,3 +154,16 @@ galeriabtn.addEventListener('click',() => {
     console.log('funcionando galeria')
     btn7.ejecutar();
 });
+//deshabilitados
+/*
+sobremibtn.addEventListener('click', () => {
+    btn2.ejecutar();
+});
+portafoliobtn.addEventListener('click',() => {
+    btn3.ejecutar();
+});
+habilidadesbtn.addEventListener('click',() => {
+    console.log('funcionando habilidades')
+    btn4.ejecutar();
+});
+*/

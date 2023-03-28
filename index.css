@@ -28,6 +28,7 @@ h1{
     left: 0;
     width: 15rem;
     background-color: #721121;
+    background: linear-gradient(355deg, rgb(76, 0, 0), rgb(201, 0, 0));
 }
 .sidebar .nav{
     height: 100%;
@@ -59,6 +60,12 @@ h1{
     font-size: 1.5rem;
     font-weight: 900;
     text-align: center;
+}
+.img{
+    height: 12rem;
+    width: 12rem;
+    border-radius: 50%;
+    margin-bottom: 2rem;
 }
 .sidebtn{
     position: absolute;
@@ -96,7 +103,8 @@ h1{
 
 .spaceCont{
     position: relative;
-    background-color: #333;
+    /* background-color: #333; */
+    background: radial-gradient(circle at 0 0, rgb(33,33,33), rgb(97, 97, 97), rgb(33,33,33));
     height: 100%;
     width: 100%;
 }
@@ -119,3 +127,8 @@ h1{
 
 
 
+@media (max-width: 767px) {
+    .nav{
+        display: none;
+    }
+}

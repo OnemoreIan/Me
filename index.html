@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="./index.css">
     <link rel="stylesheet" href="./styles/conten.css">
+    <link rel="stylesheet" href="styles/responsive.css">
     <link rel="icon" href="./src/owl_icon.svg">
     <title>Mi portafolio</title>
 </head>
@@ -25,30 +26,24 @@
             <button class="closebtn sidebtn" id="sidebtn">X</button>
             <ul>
                 <li>
-                    <img src="" alt="buho" class="img">
+                    <img src="/src/perfil.jpg" alt="buho" class="img">
                     <h1>OnemoreIan</h1>
                 </li>
                 <li>
-                    <a href="#quiensoy" id="quiensoybtn">Quien soy</a>
+                    <a href="#home" id="homebtn">Quien soy</a>
 
                 </li>
+                <!-- <li><a href="#sobremi" id="sobremibtn">Sobre mi</a></li> -->
+                <!-- <li><a href="#portafolio" id="portafoliobtn">Portafolio</a></li> -->
+                <!-- <li><a href="#habilidades" id="habilidadesbtn">Habilidades</a></li> -->
                 <li>
-                    <a href="#sobremi" id="sobremibtn">Sobre mi</a>
-                </li>
-                <li>
-                    <a href="#portafolio" id="portafoliobtn">Portafolio</a>
-                </li>
-                <li>
-                    <a href="#habilidades" id="habilidadesbtn">Habilidades</a>
+                    <a href="#proyectos" id="proyectosbtn">Proyectos</a>
                 </li>
                 <li>
                     <a href="#contacto" id="contactobtn">Contacto</a>
                 </li>
                 <li>
-                    <a href="#proyectosActivos" id="proyectosActivosbtn">Proyectos activos</a>
-                </li>
-                <li>
-                    <a href="#galeria" id="galeriabtn">Galeria</a>
+                    <a class="novisto" href="#galeria" id="galeriabtn">Galeria</a>
                 </li>
             </ul>
             <!-- <button>En-Es</button> -->
@@ -64,35 +59,28 @@
             <img src="./src/buho.png" class="buhoimg" alt="icono buho">
 
             <section class="section">
-                <div class="contenidoMostrado quiensoy" id="quiensoy">
+                <div class="contenidoMostrado home" id="home">
 
                     <h2 class="texplan dia1H2">Quien soy</h2>
-                    <p class="texplan dia1P">Mi desarrollo en esta area inicio desde el uso de videojuegos</p>
-                    <p class="texplan dia1P">Al descubrir que los juegos pueden ser
+                    <p class="texplan hometxt">
+                        <span>Con 22 añotes desde la CDMX</span>
+                        <span>Su servidor Ian!!!<br></span>
+                        <span>Soy un Desarrollador web jr<br>
+                            con un objetivo claro.<br></span>
+                        <span>Ser un Desarrollador Full Stack<br></span>
+                        <span>Con una creciente ansia de conocimiento, sin miedo al fracaso<br> y demasiado obstinado para rendirse
+                        </span>
+                    </p>
+                    <!-- <p>
+                        Soy una persona con un objetivo en mente
+                        Mi desarrollo en esta area inicio desde el uso de videojuegos<br>Al descubrir que los juegos pueden ser
                         hechos por una persona y que realmente no tenia restriccciones fue el inicio de lo que me
-                        conmovio por intentar estudiralo</p>
-                    <p class="texplan dia1P">Decubri su compocision y las ramas de la programacion</p>
-                    <p class="texplan dia1P">Los diferentes tipos de lenguajes y sus usos</p>
-                    <p class="texplan dia1P">Hasta la actualidad donde estoy enfocado principalmente en el desarrollo
-                        web</p>
+                        conmovio por intentar estudiralo<br>Decubri su compocision y las ramas de la programacion<br>
+                        Los diferentes tipos de lenguajes y sus usos<br>Hasta la actualidad donde estoy enfocado principalmente en el desarrollo
+                        web
+                    </p> -->
                     <img class="controlGif" src="https://media.tenor.com/wciT7jbJwNEAAAAi/anime-gaming.gif"
                         alt="control">
-
-                    <div class="novisto">
-
-                        <img class="quienImg"
-                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette2.wikia.nocookie.net%2Ffliplinestudios%2Fimages%2F1%2F12%2FApp_page_lg-Pizzeria_HD.png%2Frevision%2Flatest%3Fcb%3D20170807153204&f=1&nofb=1&ipt=2dd60f0245172b5f687da07a6e11d565e1f440cac9a0e5740cc15dce48b4327a&ipo=images"
-                            alt="">
-
-                        <img class="quienImg" src="https://media.tenor.com/NSUTnMx2zVQAAAAC/upset.gif" alt="conmovido">
-
-                        <img class="quienImg"
-                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2F3.bp.blogspot.com%2F-lyBpzQjRu0g%2FVsPhBdnK3wI%2FAAAAAAAAAEg%2FyqGN4AxkflA%2Fs640%2F3265.png&f=1&nofb=1&ipt=c03b925f37bf502afb85e4408d18ecc47551ace0f631a075f234aa27908b6b65&ipo=images"
-                            alt="ramas">
-                        <img class="quienImg"
-                            src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F8f%2F83%2Fb0%2F8f83b0b8bf8d4b3186bdb72c6012922b.png&f=1&nofb=1&ipt=07d58116485e496788c0fd8d607b694527f4e8b4b51c56dcd5eae046dd8e5930&ipo=images"
-                            alt="rama">
-                    </div>
 
 
 
@@ -142,18 +130,18 @@
 
                 <div class="contenidoMostrado novisto" id="contacto">
                     <h3 class="texplan dia1H2">contacto</h3>
-                    <div>
-                        <p>Linkedin: <a href="" target="_blank" rel=""></a> </p>
-                        <p>Github <a href="" target="_blank" rel="noopener noreferrer"></a> </p>
+                    <div class="contacto">
+                        <p><a href="www.linkedin.com/in/ian-del-razo" target="_blank" rel="linkedin" class="linke">Linkedin</a></p>
+                        <p><a href="https://github.com/OnemoreIan/OnemoreIan" target="_blank" rel="github" class="github">Github</a></p>
+                        <p class="tel">Telefono: <span></span></p>
+                        <p class="correo">Correo: <span></span></p>
                     </div>
                 </div>
 
-                <div class="contenidoMostrado novisto" id="proyectosActivos">
-                    <h3 class="texplan dia1H2">proyectos activos</h3>
-                    <div>
-                        <img src="" alt="">
-                        <img src="" alt="">
-                        <img src="" alt="">
+                <div class="contenidoMostrado novisto" id="proyectos">
+                    <h3 class="texplan dia1H2">Proyectos</h3>
+                    <div class="proyectos">
+                        <p><a href="https://onemoreian.github.io/NewZeland/inicio" target="_blank" rel="link example 1">Encargo de New Zeland</a></p>
                     </div>
                 </div>
 

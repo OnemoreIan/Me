@@ -1,7 +1,6 @@
 /**********************************Contenido**********************************/
 .section {
     margin: 3rem;
-    border: 1px solid red;
     min-height: 90%;
     
 }
@@ -19,29 +18,41 @@
     margin: .5rem;
     min-height: 53rem;
     height: 100%;
-    border: 5px groove orange;
-    background-color: rgb(73, 4, 138);
+    /*border: 5px groove orange;
+    border-radius: 2rem;
+     background-color: rgb(81, 81, 81); */
     position: relative;
 }
 .novisto{
     display: none;
 }
-.texplan{
-    text-align: justify;
-}
 
 /*contenido 1*/
-.quiensoy{
-    border: 3px groove blue;
+.home{
     border-radius: 10px;
     margin: .5rem;
 }
 
 .dia1H2 {
     font-size: 4rem;
-    margin: 0 0 2rem 1rem;
+    margin: 1rem 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+.hometxt{
+    position: absolute;
+    bottom: 50%;
+    left: 2rem;
+    width: 20%;
+    height: 30%;
+    text-align: justify;
+}
+.hometxt>span{
+    font-size: 20px;
+    font-weight: 500;
 }
 .dia1P{
+    
     padding-left: 1rem;
     text-align: justify;
     font-weight: 500;
@@ -62,6 +73,41 @@
     animation: semiDesaparecer 2s infinite alternate;
 }
 
+/* Contacto */
+.contacto{
+    padding-left: 2rem;
+}
+.contacto p{
+    padding: .5rem 0;
+}
+.linke, .github,.tel,.correo{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+}
+.tel>span::before{
+    padding-left: 5px;
+    content: '55 34 52 25 41';
+    width: fit-content;
+    height: fit-content;
+}
+.correo>span::before{
+    padding-left: 5px;
+    content: 'iandelrazo@gmail.com';
+    width: fit-content;
+    height: fit-content;
+}
+
+/* Proyectos */
+.proyectos{
+    width: 50%;
+    padding-left: 1rem;
+}
+.proyectos>p>a{
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+}
 
 
 
