@@ -1,16 +1,9 @@
-<h1>Portfolio of OnemoreIan</h1>>
+# Portfolio of OnemoreIan
 
-<h2>Preview link</h2>
-<a href="https://onemoreian.github.io/Me/" style="color: white;text-decoration: none;">Me Link</a>
+> Mira aqui -> [Link de la pagina](https://onemoreian.github.io/Me/)
 
-<h3>Imagen previa</h3>
-<div>
-    <img src="" alt="vista previa">
-</div>
+#### Tecnologias usadas
 
-<h4>Tecnologias usadas</h4>
-<ul>
-    <li>HTML 5</li>
-    <li>CSS 3</li>
-    <li>JS</li>
-</ul>
+* HTML 5
+* CSS 3 
+* JS
