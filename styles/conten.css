@@ -73,6 +73,7 @@
     animation: semiDesaparecer 2s infinite alternate;
 }
 
+
 /* Contacto */
 .contacto{
     padding-left: 2rem;
@@ -151,3 +152,21 @@
     }
 }
 
+@media (max-width: 767px) {
+    .section{
+        margin: 0;
+    }
+    .dia1H2{
+        margin-top: 2rem;
+        font-size: 3rem;
+    }
+    .hometxt{
+        width: 80%;
+    }
+}
+
+@media (max-width: 500px) {
+    .section{
+        margin: 0;
+    }
+}

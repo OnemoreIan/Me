@@ -27,8 +27,9 @@ h1{
     top: 0;
     left: 0;
     width: 15rem;
-    background-color: #721121;
     background: linear-gradient(355deg, rgb(76, 0, 0), rgb(201, 0, 0));
+    background: linear-gradient(355deg, rgb(0, 0, 0), rgb(14, 6, 6),rgb(0, 0, 0));
+    z-index: 1;
 }
 .sidebar .nav{
     height: 100%;
@@ -60,10 +61,11 @@ h1{
     font-size: 1.5rem;
     font-weight: 900;
     text-align: center;
+    z-index: 5;
 }
 .img{
-    height: 12rem;
-    width: 12rem;
+    height: 10rem;
+    width: 10rem;
     border-radius: 50%;
     margin-bottom: 2rem;
 }
@@ -89,7 +91,7 @@ h1{
     place-items: center;
     margin-left: 15rem;
     min-height: 100vh;
-    background-color: #F15156;
+    /* background-color: #F15156; */
     overflow: hidden;
     /* background-color: #F15156; */
     /* background: radial-gradient(circle at 95% 100%, rgb(255, 174, 68), rgb(248, 255, 121), rgb(255, 185, 50)); */
@@ -105,6 +107,10 @@ h1{
     position: relative;
     /* background-color: #333; */
     background: radial-gradient(circle at 0 0, rgb(33,33,33), rgb(97, 97, 97), rgb(33,33,33));
+    background-image: url('./src/hacking.gif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     height: 100%;
     width: 100%;
 }
@@ -128,7 +134,33 @@ h1{
 
 
 @media (max-width: 767px) {
-    .nav{
+    .img{
+        height: 6rem;
+        width: 6rem;
+    }
+}
+@media (max-width: 500px) {
+    body{
+        height: auto;
+    }
+    .sidebar{
+        width: 100%;
+    }
+    .img{
         display: none;
     }
+    .main{
+        z-index: 0;
+        margin: 0;
+    }
+    .spaceCont{
+        min-width: 100%;
+    }
+    .contenidoMostrado{
+        width: 100%;
+    }
+    .sidebarHidden{
+        width: 0;
+    }
+    
 }

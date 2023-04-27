@@ -57,7 +57,7 @@ var proyectos = document.getElementById('proyectos');
 var galeria = document.getElementById('galeria');
 
 //elementos disponibles
-const clasesUso = ['entraEpicamente' /*0*/ , 'saleEpicamente' /*1*/ , 'novisto' /*2*/ ];
+const clasesUso = [/*0*/'entraEpicamente', /*1*/'saleEpicamente', /*2*/'novisto'];
 const contenedores = [home,sobreMi,portafolio,habilidades,contacto,proyectos,galeria];
 
 
@@ -75,8 +75,9 @@ class Acciones {
     }
 
     actividad(){
+        //comprobar si ya esta activo el elemento
         if (!this.yo.classList.contains('novisto')) {
-            
+            return
         }  else{
             this.salida();
         }
@@ -86,7 +87,7 @@ class Acciones {
         //busqueda del elemento activo
         console.log('ultron inicia la salida');
         let item;
-        contenedores.forEach((i) => {//buscar la posicion del elemento activoactual
+        contenedores.forEach((i) => {//buscar la posicion del elemento activo actual
             if (!i.classList.contains(clasesUso[2])) {
                 return item = i;
             } else {
@@ -96,8 +97,8 @@ class Acciones {
 
         //animacion de salida y remplaza la animacion para desaparecer
         item.classList.add(clasesUso[1]);
-        setTimeout(() => {
-            item.classList.replace(clasesUso[1],clasesUso[2]);
+        setTimeout(async () => {
+            await item.classList.replace(clasesUso[1],clasesUso[2]);
             //busqueda de elemento y se añade
         }, 1000);
 
@@ -106,22 +107,23 @@ class Acciones {
     entrada() {
         //comprobar si el elemento activo esta con la clase desaparecer
         if(this.yo.classList.contains(clasesUso[2])){
-            setTimeout(() => {
+            setTimeout(async () => {
                 console.log('ultron inicia proceso de entrada');
-                this.yo.classList.replace(clasesUso[2],clasesUso[0]);
-                //this.yo.classList.add(clasesUso[0]);
-                //this.yo.classList.remove(clasesUso[2]);
-                setTimeout(() => {
+                await this.yo.classList.replace(clasesUso[2],clasesUso[0]);
+                await setTimeout(() => {    
                     this.yo.classList.remove(clasesUso[0]);
                     console.log('se quito la clase')
-                }, 1700);
-            },1000);
+                }, 1600);
+                //this.yo.classList.add(clasesUso[0]);
+                //this.yo.classList.remove(clasesUso[2]);
+                
+            },1500)
+
         }else {
         }
         
 
         
-        //revisar por que se baja antes de tiempo
     }
 
 }
